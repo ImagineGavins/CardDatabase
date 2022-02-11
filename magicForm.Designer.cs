@@ -45,6 +45,8 @@
             this.btnAddSet = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnLoadSets = new System.Windows.Forms.Button();
+            this.cardImg = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.cardImg)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInsertCard
@@ -56,7 +58,6 @@
             this.btnInsertCard.TabIndex = 44;
             this.btnInsertCard.Text = "Insert Card";
             this.btnInsertCard.UseVisualStyleBackColor = true;
-            this.btnInsertCard.Click += new System.EventHandler(this.insertClick);
             this.btnInsertCard.Click += new System.EventHandler(this.findSetClick);
             // 
             // btnUpdateSet
@@ -178,7 +179,6 @@
             this.btnAddSet.TabIndex = 31;
             this.btnAddSet.Text = "Add Set";
             this.btnAddSet.UseVisualStyleBackColor = true;
-            this.btnAddSet.Click += new System.EventHandler(this.addSetClick);
             this.btnAddSet.Click += new System.EventHandler(this.loadSetsClick);
             // 
             // listBox1
@@ -203,11 +203,22 @@
             this.btnLoadSets.UseVisualStyleBackColor = true;
             this.btnLoadSets.Click += new System.EventHandler(this.loadSetsClick);
             // 
+            // cardImg
+            // 
+            this.cardImg.Image = ((System.Drawing.Image)(resources.GetObject("cardImg.Image")));
+            this.cardImg.InitialImage = null;
+            this.cardImg.Location = new System.Drawing.Point(447, 12);
+            this.cardImg.Name = "cardImg";
+            this.cardImg.Size = new System.Drawing.Size(250, 350);
+            this.cardImg.TabIndex = 46;
+            this.cardImg.TabStop = false;
+            // 
             // magicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 417);
+            this.ClientSize = new System.Drawing.Size(709, 417);
+            this.Controls.Add(this.cardImg);
             this.Controls.Add(this.btnLoadSets);
             this.Controls.Add(this.btnInsertCard);
             this.Controls.Add(this.btnUpdateSet);
@@ -230,6 +241,7 @@
             this.Name = "magicForm";
             this.Text = "Magic the Gathering";
             this.Load += new System.EventHandler(this.magicForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.cardImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +265,6 @@
         private System.Windows.Forms.Button btnAddSet;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnLoadSets;
+        private System.Windows.Forms.PictureBox cardImg;
     }
 }

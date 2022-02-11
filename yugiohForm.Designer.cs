@@ -45,6 +45,8 @@
             this.btnUpdateSet = new System.Windows.Forms.Button();
             this.btnInsertCard = new System.Windows.Forms.Button();
             this.btnLoadSets = new System.Windows.Forms.Button();
+            this.cardImg = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.cardImg)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -67,7 +69,6 @@
             this.btnAddSet.TabIndex = 1;
             this.btnAddSet.Text = "Add Set";
             this.btnAddSet.UseVisualStyleBackColor = true;
-            this.btnAddSet.Click += new System.EventHandler(this.addSetClick);
             this.btnAddSet.Click += new System.EventHandler(this.loadSetsClick);
             // 
             // txtAddSet
@@ -189,7 +190,6 @@
             this.btnInsertCard.TabIndex = 14;
             this.btnInsertCard.Text = "Insert Card";
             this.btnInsertCard.UseVisualStyleBackColor = true;
-            this.btnInsertCard.Click += new System.EventHandler(this.insertClick);
             this.btnInsertCard.Click += new System.EventHandler(this.findSetClick);
             // 
             // btnLoadSets
@@ -203,11 +203,22 @@
             this.btnLoadSets.UseVisualStyleBackColor = true;
             this.btnLoadSets.Click += new System.EventHandler(this.loadSetsClick);
             // 
+            // cardImg
+            // 
+            this.cardImg.Image = ((System.Drawing.Image)(resources.GetObject("cardImg.Image")));
+            this.cardImg.InitialImage = null;
+            this.cardImg.Location = new System.Drawing.Point(447, 12);
+            this.cardImg.Name = "cardImg";
+            this.cardImg.Size = new System.Drawing.Size(250, 350);
+            this.cardImg.TabIndex = 48;
+            this.cardImg.TabStop = false;
+            // 
             // yugiohForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 417);
+            this.ClientSize = new System.Drawing.Size(709, 417);
+            this.Controls.Add(this.cardImg);
             this.Controls.Add(this.btnLoadSets);
             this.Controls.Add(this.btnInsertCard);
             this.Controls.Add(this.btnUpdateSet);
@@ -228,6 +239,7 @@
             this.Name = "yugiohForm";
             this.Text = "Yu-Gi-Oh";
             this.Load += new System.EventHandler(this.yugiohForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.cardImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +263,6 @@
         private System.Windows.Forms.Button btnUpdateSet;
         private System.Windows.Forms.Button btnInsertCard;
         private System.Windows.Forms.Button btnLoadSets;
+        private System.Windows.Forms.PictureBox cardImg;
     }
 }
