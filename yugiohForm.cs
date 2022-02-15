@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +75,7 @@ namespace CardDatabase
                 MySqlDataReader myReader;
                 myConn.Open();
                 myReader = cmdDataBase.ExecuteReader();
+
 
                 while (myReader.Read())
                 {
@@ -197,6 +199,7 @@ namespace CardDatabase
                     + this.txtCardName.Text + "', "
                     + this.txtSetCard.Text + ", "
                     + this.txtExtras.Text + ");";
+
                 MessageBox.Show(query);
                 MySqlCommand cmdDataBase = new MySqlCommand(query, myConn);
 

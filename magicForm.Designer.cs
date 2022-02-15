@@ -179,6 +179,7 @@
             this.btnAddSet.TabIndex = 31;
             this.btnAddSet.Text = "Add Set";
             this.btnAddSet.UseVisualStyleBackColor = true;
+            this.btnAddSet.Click += new System.EventHandler(this.addSetClick);
             this.btnAddSet.Click += new System.EventHandler(this.loadSetsClick);
             // 
             // listBox1

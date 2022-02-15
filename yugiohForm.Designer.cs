@@ -46,6 +46,7 @@
             this.btnInsertCard = new System.Windows.Forms.Button();
             this.btnLoadSets = new System.Windows.Forms.Button();
             this.cardImg = new System.Windows.Forms.PictureBox();
+            this.txtFileName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cardImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.btnAddSet.TabIndex = 1;
             this.btnAddSet.Text = "Add Set";
             this.btnAddSet.UseVisualStyleBackColor = true;
+            this.btnAddSet.Click += new System.EventHandler(this.addSetClick);
             this.btnAddSet.Click += new System.EventHandler(this.loadSetsClick);
             // 
             // txtAddSet
@@ -213,11 +215,20 @@
             this.cardImg.TabIndex = 48;
             this.cardImg.TabStop = false;
             // 
+            // txtFileName
+            // 
+            this.txtFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFileName.Location = new System.Drawing.Point(522, 368);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(100, 23);
+            this.txtFileName.TabIndex = 49;
+            // 
             // yugiohForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 417);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.cardImg);
             this.Controls.Add(this.btnLoadSets);
             this.Controls.Add(this.btnInsertCard);
@@ -264,5 +275,6 @@
         private System.Windows.Forms.Button btnInsertCard;
         private System.Windows.Forms.Button btnLoadSets;
         private System.Windows.Forms.PictureBox cardImg;
+        private System.Windows.Forms.TextBox txtFileName;
     }
 }
